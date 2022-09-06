@@ -23,7 +23,7 @@ jobs:
           RCLONE_CONFIG_HDX_USER: ${{ secrets.RCLONE_CONFIG_HDX_USER_DEV }}
           RCLONE_CONFIG_HDX_PASS: ${{ secrets.RCLONE_CONFIG_HDX_PASS_DEV }}
         with:
-          args: copy strattic-search.php HDX:/public_html/wp-content/mu-plugins/strattic-search.php
+          args: copy strattic-search.php HDX:/public_html/wp-content/mu-plugins/
 
       - name: Copy strattic-search plugin files on dev
         uses: wei/rclone@v1
@@ -50,7 +50,7 @@ jobs:
           RCLONE_CONFIG_HDX_USER: ${{ secrets.RCLONE_CONFIG_HDX_USER_PROD }}
           RCLONE_CONFIG_HDX_PASS: ${{ secrets.RCLONE_CONFIG_HDX_PASS_PROD }}
         with:
-          args: copy strattic-search.php HDX:/public_html/wp-content/mu-plugins/strattic-search.php
+          args: copy strattic-search.php HDX:/public_html/wp-content/mu-plugins/
 
       - name: Copy strattic-search plugin files on prod
         uses: wei/rclone@v1
