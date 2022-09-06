@@ -1,0 +1,165 @@
+.strattic-search-humdata.search .single-gutter .tmb {
+	position: relative !important;
+	float: left;
+	margin: 20px 1% 0 1%;
+	width: 23% !important;
+}
+
+.strattic-search-humdata .main-container .row-container .row-parent .uncont > *:first-child:not(.divider-wrapper) > *:first-child > *:first-child {
+	margin-top: 60px !important;
+}
+
+.strattic-search-humdata .nav-links {
+	float: left;
+	width: 100%;
+	color: #ccc !important;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.strattic-search-humdata .nav-links h2 {
+	display: none;
+}
+
+.strattic-search-humdata .nav-links a {
+	font-family: Stag-Medium;
+	font-weight: 400!important;
+	text-transform: capitalize;
+	color:  #ccc !important;
+	font-size: 14px !important;
+}
+
+.strattic-search-humdata .nav-links a i {
+	font-size: 24px !important;
+	margin: 0 10px;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+}
+
+.strattic-search-humdata .nav-links .prev {
+	float: left;
+}
+
+.strattic-search-humdata .nav-links .next {
+	float: right;
+}
+
+.strattic-search-humdata .nav-links .next strong,
+.strattic-search-humdata .nav-links .prev strong {
+	display: inline-block;
+	font-weight: 400!important;
+}
+
+.strattic-search-humdata .nav-links .prev strong:hover {
+	transform: translateX(-4px);
+}
+
+.strattic-search-humdata .nav-links .next strong:hover {
+	transform: translateX(4px);
+}
+
+.strattic-search-humdata .nav-links a:hover {
+	border: 2px solid #f2645a;
+	color: #f2645a!important;
+}
+
+.strattic-search-humdata .nav-links span.current {
+	background-color: #f2645a;
+	border: 2px solid transparent;
+	color: #fff!important;
+	background-color: #f2645a;
+	border: 2px solid transparent;
+	color: #fff!important;
+}
+
+.strattic-search-humdata .nav-links a.page-numbers:hover {
+	border: 2px solid #f2645a;
+	color: #f2645a!important;
+}
+
+.strattic-search-humdata .nav-links a.page-numbers,
+.strattic-search-humdata .nav-links span.current {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	margin: 4.5px 4.5px 4.5px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	padding: 0 !important;
+}
+
+.strattic-search-humdata .nav-links span.current {
+	margin-top: 6.5px;
+	line-height: 30px;
+}
+
+.strattic-search-humdata .nav-links a.page-numbers.next,
+.strattic-search-humdata .nav-links a.page-numbers.prev {
+	display: inline-block;
+	width: auto;
+	height: height;
+	line-height: 36px;
+	margin: 0;
+	border-radius: 0;
+	border: none;
+}
+
+
+.nav-link a.disabled{
+	color:#ccc;cursor:default;pointer-events:none
+}
+.archive .row-parent.no-h-padding .isotope-footer-inner>.nav-link,
+.search .row-parent.no-h-padding .isotope-footer-inner>.nav-link {
+	padding-left:18px;padding-right:18px
+}
+.archive .isotope-footer .nav-link .btn,
+.search .isotope-footer .nav-link .btn {
+	font-family:Stag-Medium;font-weight:400!important;text-transform:capitalize
+}
+.archive .isotope-footer .nav-link > li,
+.search .isotope-footer .nav-link > li {
+	padding-right:10px
+}
+.archive .isotope-footer .nav-link > li .current,
+.search .isotope-footer .nav-link > li .current {
+	background-color:#f2645a;border:2px solid transparent;color:#fff!important
+}
+.archive .isotope-footer .nav-link > li a.page-numbers,
+.search .isotope-footer .nav-link > li a.page-numbers {
+	border:2px solid transparent;color:#f2645a;cursor:pointer
+}
+.archive .isotope-footer .nav-link > li a.page-numbers:hover,
+.search .isotope-footer .nav-link > li a.page-numbers:hover {
+	border:2px solid #f2645a;color:#f2645a!important
+}
+.archive .isotope-footer .nav-link .page-next,
+.archive .isotope-footer .nav-link .page-prev,
+.search .isotope-footer .nav-link .page-next,
+.search .isotope-footer .nav-link .page-prev {
+	margin-top:6px;width:auto
+}
+.archive .isotope-footer .nav-link .page-next i,
+.archive .isotope-footer .nav-link .page-prev i,
+.search .isotope-footer .nav-link .page-next i,
+.search .isotope-footer .nav-link .page-prev i {
+	font-size:24px;margin-top:-12px
+}
+.archive .isotope-footer .nav-link .page-next a:hover,
+.archive .isotope-footer .nav-link .page-prev a:hover,
+.search .isotope-footer .nav-link .page-next a:hover,
+.search .isotope-footer .nav-link .page-prev a:hover {
+	text-decoration:underline
+}
+.archive .isotope-footer .nav-link > li {
+	padding-right:5px
+}
+.archive .isotope-footer .nav-link .page-next a span,
+.archive .isotope-footer .nav-link .page-prev a span {
+	display:none
+}
+.archive .isotope-footer .nav-link .page-next a i,
+.archive .isotope-footer .nav-link .page-prev a i {
+	margin-top:-4px
+}
