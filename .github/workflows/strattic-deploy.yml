@@ -1,0 +1,63 @@
+name: Copy files to Strattic
+
+on:
+  push:
+    branches:
+      - dev
+  release:
+    types: [published]
+
+jobs:
+  rclone-dev:
+    runs-on: ubuntu-latest
+    if: ${{ (github.event.release.target_commitish || github.ref_name) == 'dev' }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Copy strattic-search main file on dev
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONFIG_HDX_TYPE: ${{ secrets.RCLONE_CONFIG_HDX_TYPE }}
+          RCLONE_CONFIG_HDX_HOST: ${{ secrets.RCLONE_CONFIG_HDX_HOST }}
+          RCLONE_CONFIG_HDX_USER: ${{ secrets.RCLONE_CONFIG_HDX_USER_DEV }}
+          RCLONE_CONFIG_HDX_PASS: ${{ secrets.RCLONE_CONFIG_HDX_PASS_DEV }}
+        with:
+          args: copy strattic-search.php HDX:/public_html/wp-content/mu-plugins/
+
+      - name: Copy strattic-search plugin files on dev
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONFIG_HDX_TYPE: ${{ secrets.RCLONE_CONFIG_HDX_TYPE }}
+          RCLONE_CONFIG_HDX_HOST: ${{ secrets.RCLONE_CONFIG_HDX_HOST }}
+          RCLONE_CONFIG_HDX_USER: ${{ secrets.RCLONE_CONFIG_HDX_USER_DEV }}
+          RCLONE_CONFIG_HDX_PASS: ${{ secrets.RCLONE_CONFIG_HDX_PASS_DEV }}
+        with:
+          args: copy strattic-search/ HDX:/public_html/wp-content/mu-plugins/strattic-search
+
+  rclone-prod:
+    runs-on: ubuntu-latest
+    if: ${{ (github.event.release.target_commitish || github.ref_name) == 'main' }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Copy strattic-search main file on prod
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONFIG_HDX_TYPE: ${{ secrets.RCLONE_CONFIG_HDX_TYPE }}
+          RCLONE_CONFIG_HDX_HOST: ${{ secrets.RCLONE_CONFIG_HDX_HOST }}
+          RCLONE_CONFIG_HDX_USER: ${{ secrets.RCLONE_CONFIG_HDX_USER_PROD }}
+          RCLONE_CONFIG_HDX_PASS: ${{ secrets.RCLONE_CONFIG_HDX_PASS_PROD }}
+        with:
+          args: copy strattic-search.php HDX:/public_html/wp-content/mu-plugins/
+
+      - name: Copy strattic-search plugin files on prod
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONFIG_HDX_TYPE: ${{ secrets.RCLONE_CONFIG_HDX_TYPE }}
+          RCLONE_CONFIG_HDX_HOST: ${{ secrets.RCLONE_CONFIG_HDX_HOST }}
+          RCLONE_CONFIG_HDX_USER: ${{ secrets.RCLONE_CONFIG_HDX_USER_PROD }}
+          RCLONE_CONFIG_HDX_PASS: ${{ secrets.RCLONE_CONFIG_HDX_PASS_PROD }}
+        with:
+          args: copy strattic-search/ HDX:/public_html/wp-content/mu-plugins/strattic-search

@@ -233,6 +233,8 @@ add_filter(
 
 		foreach ($item['categories'] as $category) {
 			if($category['slug'] === 'resource-library') {
+				$item['short_title'] = strlen($item['title']) > 50 ? substr($item['title'], 0, 50).'...' : $item['title'];
+
 				$resource_category = get_field('resource_category', $item['id']);
 				$item['resource_category'] = ($resource_category !== '') ? $resource_category : 'Resource';
 
